@@ -680,6 +680,46 @@ md"""
 # ╔═╡ eb8d3d95-504f-4b81-848d-7746863b55e2
 equation_search(sr_input, sr_output)
 
+# ╔═╡ 75c5fe54-a7a3-466f-9769-3ec43c2c21a6
+
+
+# ╔═╡ 9f0d6ce1-cb51-4933-8f9c-e6e0a6f67a8a
+md"""
+## Dyad
+
+```
+partial analysis ComponentUDEAnalysis
+  extends Analysis
+  model = EmptyComponent()
+  parameter alg::String = "auto"
+  parameter start::Time = 0
+  parameter stop::Time = 0
+  parameter abstol::Real
+  parameter reltol::Real
+  parameter saveat::Real = 0
+  parameter dtmax::Time = 0
+  structural parameter data::DyadData.DyadDataset
+  parameter depvars_names::String[1]
+  parameter loss_func::String = "l2loss"
+  parameter calibration_alg::String
+  parameter multiple_shooting_trajectories::Integer = 0
+  parameter pem_gain::Real = 0
+  parameter optimizer::String = "auto"
+  parameter optimizer_maxiters::Integer
+  parameter optimizer_maxtime::Real = 0
+  parameter optimizer_abstol::Real = 1e-4
+  parameter optimizer_verbose::Boolean = false
+  parameter network_component::String
+  parameter min_weight::Real = -Inf
+  parameter max_weight::Real = Inf
+  parameter training_result::String = ""
+  parameter sr_maxdepth::Integer
+  parameter sr_maxsize::Integer
+  parameter sr_unary_operators::String[1] = []
+end
+```
+"""
+
 # ╔═╡ Cell order:
 # ╟─48e34a90-67cc-11f0-361f-d5caa033960d
 # ╟─2658f446-1d54-4140-9737-e5a22e2d3d8d
@@ -745,7 +785,7 @@ equation_search(sr_input, sr_output)
 # ╠═46c8a34c-aa91-4e45-af40-b0b96a815a47
 # ╟─4b5ad787-0838-46ba-b2ee-35c5736355dd
 # ╠═0fa6519d-e26a-4795-a097-01c4e43c3fc7
-# ╠═a6d1a31c-2626-4e74-ac41-849b435948d3
+# ╟─a6d1a31c-2626-4e74-ac41-849b435948d3
 # ╠═c84d3c8a-e9e9-494e-bf4a-3d2f7b666c59
 # ╟─b430acbd-e2a2-49ad-946d-f294c91825ee
 # ╠═63ac9ec2-526b-48f1-aaf7-8ca1833956c9
@@ -760,3 +800,5 @@ equation_search(sr_input, sr_output)
 # ╠═fe8a3fbf-bf7d-41a6-b48a-4f211019bff3
 # ╟─30b451f5-9889-40ea-a72a-8a94bfb4b1a3
 # ╠═eb8d3d95-504f-4b81-848d-7746863b55e2
+# ╠═75c5fe54-a7a3-466f-9769-3ec43c2c21a6
+# ╟─9f0d6ce1-cb51-4933-8f9c-e6e0a6f67a8a

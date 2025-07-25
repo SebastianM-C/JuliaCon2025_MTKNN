@@ -533,7 +533,7 @@ sys3 = mtkcompile(model)
 
 # ╔═╡ 851e0e18-b7e4-48af-9d93-277796819038
 md"""
-Let's check that we can succesfully simulate the system in the initial state:
+Let's check that we can successfully simulate the system in the initial state:
 """
 
 # ╔═╡ 56db609d-72cd-4fbb-a7ba-ce90115daa5d
@@ -582,13 +582,13 @@ md"""
 """
 
 # ╔═╡ 0fa6519d-e26a-4795-a097-01c4e43c3fc7
-begin	
+begin
 	of = OptimizationFunction(loss, AutoForwardDiff())
-	
+
 	data = sol1[sys1.pot.T]
 	get_T = getsym(prob3, sys3.pot.T)
 	opt_ps = (prob3, oop_update, data, sol1.t, get_T);
-	
+
 	op = OptimizationProblem(of, x0, opt_ps,)
 end
 
@@ -667,7 +667,7 @@ begin
 	lux_model = new_sol1.ps[sys3.thermal_nn.nn.lux_model]
 	nn_p = new_sol1.ps[sys3.thermal_nn.nn.p]
 	T = new_sol1.ps[sys3.thermal_nn.nn.T]
-	
+
 	sr_input = reduce(hcat, new_sol1[sys3.thermal_nn.nn.inputs])
 	sr_output = LuxCore.stateless_apply(lux_model, sr_input, convert(T, nn_p))
 end

@@ -27,7 +27,7 @@ end
 
 # ╔═╡ 48e34a90-67cc-11f0-361f-d5caa033960d
 md"""
-# Exploring acasual model augmentation with neural networks
+# Exploring acausal model augmentation with neural networks
 
 Sebastian Micluța-Câmpeanu¹ ², Fredrik Bagge Carlson¹
 
@@ -38,12 +38,12 @@ Sebastian Micluța-Câmpeanu¹ ², Fredrik Bagge Carlson¹
 
 # ╔═╡ ef97932f-bbb6-4cc0-8102-5bdbd454b6a7
 md"""
-## Acasual modeling
+## Acausal modeling
 """
 
 # ╔═╡ 3ac83699-240e-4dab-8493-7ac8b294a87d
 md"""
-With acasual modeling we want to represent the dynamics of the system as a collection of **components** and **connections** between them instead of a (large) system of differential algebraic equations (DAEs). The large system of DAEs *is still built* by ModelingToolkit as part of structural simplification (`mtkcompile`).
+With acausal modeling we want to represent the dynamics of the system as a collection of **components** and **connections** between them instead of a (large) system of differential algebraic equations (DAEs). The large system of DAEs *is still built* by ModelingToolkit as part of structural simplification (`mtkcompile`).
 
 The unsimplified version of the system can be visualized as a block diagram, which becomes essential for understandig and debugging more complex system since the connections between the blocks are usually translated to various interactions between the components of the physical system.
 """
